@@ -24,7 +24,7 @@ This repository contains projects and assignments for the **Web Design** course 
 
 | # | Project | Tech | Link |
 |---|---------|------|------|
-| 1 | Ho ca (Aquarium) | HTML, CSS | [View project](./hoca/) · [Source](./hoca/index.html) |
+| 1 | Aquarium | HTML, CSS | [View project](./aquarium/) · [Source](./aquarium/index.html) |
 
 ## License
 
