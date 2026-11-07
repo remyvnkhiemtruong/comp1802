@@ -16,7 +16,7 @@ This repository contains projects and assignments for the **Web Design** course 
 
 | Field | Details |
 |-------|---------|
-| **Name** | Truong Minh Khiem |
+| **Name** | Minh Khiem Truong |
 | **Major** | Information Technology |
 | **University** | Ho Chi Minh City University of Education (HCMUE) |
 
@@ -25,6 +25,7 @@ This repository contains projects and assignments for the **Web Design** course 
 | # | Project | Tech | Link |
 |---|---------|------|------|
 | 1 | Aquarium | HTML, CSS | [View project](./aquarium/) · [Source](./aquarium/index.html) |
+| 2 | CV | HTML, CSS | [View project](./cv/) · [Source](./cv/index.html) |
 
 ## License
 
