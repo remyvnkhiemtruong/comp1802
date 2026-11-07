@@ -1,0 +1,7 @@
+
+# Browser QA captures
+scripts/*-desktop.png
+scripts/*-mobile.png
+scripts/before.png
+scripts/test.jpg
+__pycache__/
