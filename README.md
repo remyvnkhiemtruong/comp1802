@@ -8,7 +8,7 @@ This repository contains projects and assignments for the **Web Design** course 
 |-------|---------|
 | **Course** | Web Design |
 | **Course Code** | COMP1802 |
-| **Instructor** | M.Sc. Luong Tran Hy Hien |
+| **Instructor** | M.Sc. Hien Tran Hy Luong |
 | **Faculty** | Faculty of Information Technology |
 | **University** | Ho Chi Minh City University of Education (HCMUE) |
 
