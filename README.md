@@ -22,9 +22,9 @@ This repository contains projects and assignments for the **Web Design** course 
 
 ## Projects
 
-| # | Project | Description | Tech | Link |
-|---|---------|-------------|------|------|
-| 1 | Ho ca (Aquarium) | Full-screen aquarium animation with fish, sea turtle, and divers using pure HTML & CSS | HTML, CSS | [View project](./hoca/) · [Source](./hoca/index.html) |
+| # | Project | Tech | Link |
+|---|---------|------|------|
+| 1 | Ho ca (Aquarium) | HTML, CSS | [View project](./hoca/) · [Source](./hoca/index.html) |
 
 ## License
 
