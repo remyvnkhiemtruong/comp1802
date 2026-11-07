@@ -1,64 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COMP1802 | Minh Khiem Truong</title>
-  <meta name="description" content="Web Design coursework by Minh Khiem Truong: Aquarium and CV.">
-  <meta name="color-scheme" content="light">
+  <title>COMP1802 — Projects</title>
   <style>
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
-      background: #fafaf8;
-      color: #242424;
-      font: 16px/1.6 Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
     }
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 80px 24px;
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
     }
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1.2;
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
       letter-spacing: -0.5px;
+      color: #fff;
     }
-    header p { margin: 10px 0 0; color: #595959; }
-    nav { margin-top: 36px; }
-    ul { list-style: none; margin: 0; padding: 0; }
-    li { border-bottom: 1px solid #d8d8d3; }
-    nav a {
-      display: block;
-      padding: 18px 0;
-      font-size: 19px;
-      text-underline-offset: 4px;
-      text-decoration-thickness: 1px;
+
+    header p {
+      margin-top: 10px;
+      color: #718096;
+      font-size: 1rem;
     }
-    a { color: inherit; }
-    a:hover { color: #175b46; }
-    a:focus-visible { outline: 2px solid #175b46; outline-offset: 5px; }
-    footer { margin-top: 32px; font-size: 14px; color: #595959; }
-    footer a { text-underline-offset: 3px; }
-    @media (max-width: 480px) {
-      main { padding-top: 40px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: #1a1d27;
+      border: 1px solid #2d3148;
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: #5b6ef5;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(91, 110, 245, 0.15);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #718096;
+      line-height: 1.6;
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #2d3148;
+      color: #a0aec0;
+      width: fit-content;
+    }
+
+    footer {
+      margin-top: 64px;
+      color: #4a5568;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>COMP1802</h1>
-      <p>Web Design<br>Minh Khiem Truong</p>
-    </header>
-    <nav aria-label="Course projects">
-      <ul>
-        <li><a href="aquarium/index.html">Aquarium</a></li>
-        <li><a href="cv/index.html">CV</a></li>
-      </ul>
-    </nav>
-    <footer><a href="https://github.com/remyvnkhiemtruong/comp1802">GitHub</a></footer>
-  </main>
+
+  <header>
+    <h1>COMP1802</h1>
+    <p>List of projects for the course</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="aquarium/index.html">
+      <div class="card-icon">🐠</div>
+      <div class="card-title">Aquarium</div>
+      <span class="card-tag">HTML · CSS</span>
+    </a>
+
+    <a class="card" href="cv/index.html">
+      <div class="card-title">CV</div>
+      <span class="card-tag">HTML · CSS</span>
+    </a>
+
+    <!-- Thêm project mới vào đây -->
+
+  </div>
+
+  <footer>COMP1802 &mdash; remyvnkhiemtruong</footer>
+
 </body>
 </html>
