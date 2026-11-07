@@ -8,7 +8,7 @@ This repository contains projects and assignments for the **Web Design** course 
 |-------|---------|
 | **Course** | Web Design |
 | **Course Code** | COMP1802 |
-| **Instructor** | M.Sc. Lương Trần Hy Hiến |
+| **Instructor** | M.Sc. Luong Tran Hy Hien |
 | **Faculty** | Faculty of Information Technology |
 | **University** | Ho Chi Minh City University of Education (HCMUE) |
 
@@ -16,15 +16,15 @@ This repository contains projects and assignments for the **Web Design** course 
 
 | Field | Details |
 |-------|---------|
-| **Name** | Trương Minh Khiêm |
+| **Name** | Truong Minh Khiem |
 | **Major** | Information Technology |
 | **University** | Ho Chi Minh City University of Education (HCMUE) |
 
 ## Projects
 
-| # | Project | Description | Tech |
-|---|---------|-------------|------|
-| 1 | [Hồ cá](./hoca/) | Full-screen aquarium animation with fish, sea turtle, and divers | HTML, CSS |
+| # | Project | Description | Tech | Link |
+|---|---------|-------------|------|------|
+| 1 | Ho ca (Aquarium) | Full-screen aquarium animation with fish, sea turtle, and divers using pure HTML & CSS | HTML, CSS | [View project](./hoca/) · [Source](./hoca/index.html) |
 
 ## License
 
