@@ -5,3 +5,6 @@ scripts/*-mobile.png
 scripts/before.png
 scripts/test.jpg
 __pycache__/
+
+# Full-resolution visual QA captures
+/artifacts/

@@ -64,10 +64,17 @@ This repository is licensed under the [MIT License](./LICENSE).
 
 Mỗi folder có README với phạm vi và dàn ý báo cáo. Báo cáo DOCX/PDF, phần phân công và thuyết trình cần chuẩn bị riêng. Các ảnh lưu nội bộ từ Unsplash, dùng làm minh họa chủ đề; không phải ảnh chính xác cho từng mặt hàng.
 
-Mã nền dùng chung được sao chép vào từng project để folder chạy độc lập. `scripts/build-projects.py` sinh HTML/CSS/data từ `scripts/projects.json`; `scripts/main-template.js` là nguồn JavaScript chung. Sau khi sửa mẫu cần sao chép vào `js/main.js` của các project. Không chạy lại trình sinh sau khi đã sửa tay các trang nếu muốn giữ chỉnh sửa đó.
+## Giao diện theo từng project
 
-### Kiểm tra tự động
+Mỗi project có bố cục, hệ chữ, điều hướng và cách hiển thị nội dung riêng. Các trang trong cùng project dùng nhận diện thống nhất. Trang index có ảnh chụp giao diện để so sánh nhanh.
 
-Dùng Python Playwright với trình duyệt Chromium để chạy `scripts/check-browser.py` và `scripts/check-flows.py` khi máy đã cài sẵn Playwright. Khởi động server tĩnh ở cổng 8080 trước khi chạy. Đã kiểm tra 72 lượt tải trang, 24 viewport mobile và các luồng tài khoản, giỏ hàng, đặt chỗ, trùng lịch, dữ liệu công cụ, tiến độ, tải ảnh và góp ý.
+Nguồn hiện hành là HTML/CSS/JS trực tiếp trong từng folder. Mỗi folder chạy độc lập, không cần build. Các script sinh mẫu ban đầu (`build-projects.py`, `refine-design.py`, `main-template.js`...) chỉ giữ làm lịch sử tạo mẫu; **không chạy lại hoặc sao chép đè**, vì sẽ làm mất thiết kế và bộ xử lý riêng hiện tại.
 
-Các bước tạo lại: build-projects.py → add-photos.py → refine-design.py → product-details.py → editorial-content.py → brand-details.py. Sao lưu các sửa tay trước khi tạo lại. Các script tải ảnh cần mạng; website sau khi tạo có thể chạy ngoại tuyến. Ảnh một số trang du lịch/văn hóa/ẩm thực được lấy qua Wikipedia/Wikimedia; xem images/SOURCES.md trong folder tương ứng.
+### Kiểm tra
+
+Chạy server tĩnh ở cổng 8080, sau đó dùng Python có Playwright/Chromium để chạy:
+
+- `scripts/check-redesign.py`: tải 216 trang ở 390px, 1024px và 1440px; phát hiện lỗi JavaScript, tài nguyên 404 và tràn ngang; chụp các trang chủ vào artifacts/redesign.
+- `scripts/check-flows.py`: kiểm tra các luồng tài khoản, giỏ hàng, đặt chỗ, trùng lịch, công cụ, tiến độ học, tải ảnh và góp ý.
+
+Ảnh giao diện hiển thị ở trang index được lưu trong previews. Ảnh nội dung được lưu trong từng project; một số có ghi chú nguồn tại images/SOURCES.md. Các font bổ sung được lưu nội bộ kèm giấy phép OFL. Không có backend hoặc thanh toán thật.

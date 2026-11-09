@@ -29,3 +29,8 @@ Loại chức năng: guide. Tìm kiếm, lọc, xem chi tiết; quản lý nội
 6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
 
 Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+
+## Giao diện riêng
+Sổ tay điểm đến: Trang mở đầu như sổ hành trình, các điểm dừng được đánh số. Tập trung vào ảnh địa điểm và ghi chú thực tế.
+
+Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.

@@ -29,3 +29,8 @@ Loại chức năng: ticket. Tìm kiếm, lọc, xem chi tiết; quản lý nộ
 6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
 
 Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+
+## Giao diện riêng
+Chương trình điện ảnh và âm nhạc: Nền tối, poster chữ riêng cho chương trình hư cấu, suất diễn và danh sách vé. Nội dung giúp chọn buổi xem nhanh.
+
+Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.

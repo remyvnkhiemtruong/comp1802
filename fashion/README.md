@@ -29,3 +29,12 @@ Loại chức năng: shop. Tìm kiếm, lọc, xem chi tiết; quản lý nội 
 6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
 
 Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+
+## Giao diện riêng
+Bố cục chiến dịch thời trang đen trắng; danh mục sản phẩm theo nhóm, ảnh lớn và thông tin ngắn.
+Các trang tài khoản, liên hệ và giới thiệu dùng cùng nhận diện của project. Các sửa đổi giao diện này được duy trì trực tiếp trong folder; không chạy script sinh trang cũ để tránh ghi đè.
+
+## Giao diện riêng
+Chiến dịch thời trang: Ảnh chiến dịch lớn, chữ đen trắng và danh mục theo loại trang phục. Sản phẩm nằm trong lưới thoáng để nhìn rõ phom dáng.
+
+Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.
