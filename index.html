@@ -3,156 +3,386 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COMP1802 — Projects</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #0f1117;
-      color: #e2e8f0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #fff;
-    }
-
-    header p {
-      margin-top: 10px;
-      color: #718096;
-      font-size: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 1160px;
-    }
-
-    .card {
-      background: #1a1d27;
-      border: 1px solid #2d3148;
-      border-radius: 14px;
-      padding: 28px 24px;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transition: border-color 0.15s;
-    }
-
-    .card:hover {
-      border-color: #5b6ef5;
-
-
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      line-height: 1;
-    }
-
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .card-desc {
-      font-size: 0.875rem;
-      color: #718096;
-      line-height: 1.6;
-    }
-
-    .card-tag {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 2px 10px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background: #2d3148;
-      color: #a0aec0;
-      width: fit-content;
-    }
-
-    footer {
-      margin-top: 64px;
-      color: #4a5568;
-      font-size: 0.8rem;
-    }
-  .card-preview { display:block; width:calc(100% + 48px); max-width:none; margin:-28px -24px 12px; height:auto; aspect-ratio:8/5; object-fit:cover; border-bottom:1px solid #2d3148; }
-    .card { overflow:hidden; border-radius:6px; }
-    .card-title { letter-spacing:.2px; }
-    .card-desc { color:#9ba6b6; }
-    .card-tag { border-radius:3px; }
-    a:focus-visible { outline:3px solid #adb8ed; outline-offset:4px; }
-  </style>
+  <meta name="description" content="Danh mục 26 project học phần Thiết kế Web COMP1802: thương mại điện tử, du lịch, học tập, tiện ích và các bài thực hành nền tảng.">
+  <meta name="theme-color" content="#f7f8f5">
+  <title>COMP1802 | Danh mục project Thiết kế Web</title>
+  <link rel="icon" href="previews/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/catalogue.css">
+  <script defer src="js/catalogue.js"></script>
 </head>
 <body>
-
-  <header>
-    <h1>COMP1802</h1>
-    <p>26 bài thực hành · 24 giao diện theo từng đề tài</p>
+  <a class="skip" href="#projects">Đến danh sách project</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="site-brand" href="index.html" aria-label="COMP1802, trang chủ">
+        <span class="brand-mark" aria-hidden="true">c.</span>
+        <span class="brand-text">COMP1802<small>Thiết kế Web / HCMUE</small></span>
+      </a>
+      <nav aria-label="Điều hướng danh mục">
+        <a href="#projects">Các website</a>
+        <a href="#foundations">Bài tập nền tảng</a>
+        <a class="repo-link" href="https://github.com/remyvnkhiemtruong/comp1802" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </header>
-
-  <div class="grid">
-
-    <a class="card" href="aquarium/index.html">
-      <div class="card-icon">🐠</div>
-      <div class="card-title">Aquarium</div>
-      <span class="card-tag">HTML · CSS</span>
-    </a>
-
-    <a class="card" href="cv/index.html">
-      <div class="card-title">CV</div>
-      <span class="card-tag">HTML · CSS</span>
-    </a>
-
-    <a class="card" href="fashion/index.html"><img class="card-preview" src="previews/fashion.webp" alt="Giao diện NẾP" loading="lazy" width="720" height="450"><span class="card-tag">03 · Thời trang</span><div class="card-title">NẾP</div><p class="card-desc">Những thiết kế dễ mặc, đường may gọn gàng, cho tủ đồ hằng ngày.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="tech/index.html"><img class="card-preview" src="previews/tech.webp" alt="Giao diện MẠCH" loading="lazy" width="720" height="450"><span class="card-tag">04 · Công nghệ</span><div class="card-title">MẠCH</div><p class="card-desc">Thiết bị và linh kiện được sắp xếp theo nhu cầu học tập, làm việc và giải trí.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="furniture/index.html"><img class="card-preview" src="previews/furniture.webp" alt="Giao diện GỖ NHÀ" loading="lazy" width="720" height="450"><span class="card-tag">05 · Nội thất</span><div class="card-title">GỖ NHÀ</div><p class="card-desc">Nội thất nhỏ gọn, vật liệu mộc mạc, đủ dùng cho nhịp sống mỗi ngày.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="handmade/index.html"><img class="card-preview" src="previews/handmade.webp" alt="Giao diện TAY MỘC" loading="lazy" width="720" height="450"><span class="card-tag">06 · Thủ công</span><div class="card-title">TAY MỘC</div><p class="card-desc">Gốm, vải và những vật dụng nhỏ được làm chậm rãi, chăm chút từng chi tiết.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="bookstore/index.html"><img class="card-preview" src="previews/bookstore.webp" alt="Giao diện TRANG" loading="lazy" width="720" height="450"><span class="card-tag">07 · Sách</span><div class="card-title">TRANG</div><p class="card-desc">Một hiệu sách nhỏ với văn học, kỹ năng và những cuốn sách cho ngày cuối tuần.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="flowers/index.html"><img class="card-preview" src="previews/flowers.webp" alt="Giao diện THÁNG HOA" loading="lazy" width="720" height="450"><span class="card-tag">08 · Hoa & quà</span><div class="card-title">THÁNG HOA</div><p class="card-desc">Hoa theo mùa, bó vừa tay. Chọn một món quà cho người bạn đang nghĩ đến.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="organic/index.html"><img class="card-preview" src="previews/organic.webp" alt="Giao diện VƯỜN SỚM" loading="lazy" width="720" height="450"><span class="card-tag">09 · Nông sản</span><div class="card-title">VƯỜN SỚM</div><p class="card-desc">Rau củ theo mùa và nông sản địa phương với thông tin rõ ràng, dễ lựa chọn.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="dalat/index.html"><img class="card-preview" src="previews/dalat.webp" alt="Giao diện CHẠM ĐÀ LẠT" loading="lazy" width="720" height="450"><span class="card-tag">10 · Điểm đến</span><div class="card-title">CHẠM ĐÀ LẠT</div><p class="card-desc">Ghi lại những cung đường, quán nhỏ và khoảng xanh cho chuyến đi Đà Lạt của bạn.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="tours/index.html"><img class="card-preview" src="previews/tours.webp" alt="Giao diện ĐI CHẬM" loading="lazy" width="720" height="450"><span class="card-tag">11 · Tour du lịch</span><div class="card-title">ĐI CHẬM</div><p class="card-desc">Những hành trình vừa sức, có thời gian dừng lại và tìm hiểu văn hóa địa phương.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="homestay/index.html"><img class="card-preview" src="previews/homestay.webp" alt="Giao diện HIÊN" loading="lazy" width="720" height="450"><span class="card-tag">12 · Homestay</span><div class="card-title">HIÊN</div><p class="card-desc">Chọn một căn phòng sáng, một chiếc ghế êm và một kỳ nghỉ không vội.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="cuisine/index.html"><img class="card-preview" src="previews/cuisine.webp" alt="Giao diện BẾP DỌC MIỀN" loading="lazy" width="720" height="450"><span class="card-tag">13 · Ẩm thực</span><div class="card-title">BẾP DỌC MIỀN</div><p class="card-desc">Khám phá món ăn Việt qua nguyên liệu, câu chuyện và cách thưởng thức.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="festivals/index.html"><img class="card-preview" src="previews/festivals.webp" alt="Giao diện MÙA HỘI" loading="lazy" width="720" height="450"><span class="card-tag">14 · Văn hóa</span><div class="card-title">MÙA HỘI</div><p class="card-desc">Một cuốn lịch nhỏ về các lễ hội, tập quán và sinh hoạt văn hóa Việt Nam.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="tickets/index.html"><img class="card-preview" src="previews/tickets.webp" alt="Giao diện SUẤT TỐI" loading="lazy" width="720" height="450"><span class="card-tag">15 · Vé & sự kiện</span><div class="card-title">SUẤT TỐI</div><p class="card-desc">Chọn phim, đêm nhạc và giữ một chỗ ngồi cho buổi tối của bạn.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="language/index.html"><img class="card-preview" src="previews/language.webp" alt="Giao diện CÙNG HỌC" loading="lazy" width="720" height="450"><span class="card-tag">16 · Trung tâm ngoại ngữ</span><div class="card-title">CÙNG HỌC</div><p class="card-desc">Các lớp ngoại ngữ theo trình độ, lịch học rõ ràng và bài tập thực hành.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="courses/index.html"><img class="card-preview" src="previews/courses.webp" alt="Giao diện MỞ LỚP" loading="lazy" width="720" height="450"><span class="card-tag">17 · Học trực tuyến</span><div class="card-title">MỞ LỚP</div><p class="card-desc">Bài học ngắn, ví dụ rõ ràng và lộ trình có thể theo dõi từng bước.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="study-blog/index.html"><img class="card-preview" src="previews/study-blog.webp" alt="Giao diện GHI CHÉP" loading="lazy" width="720" height="450"><span class="card-tag">18 · Tài liệu học tập</span><div class="card-title">GHI CHÉP</div><p class="card-desc">Một góc lưu tài liệu, kinh nghiệm tự học và các ghi chú sau giờ lên lớp.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="coding/index.html"><img class="card-preview" src="previews/coding.webp" alt="Giao diện XƯỞNG WEB" loading="lazy" width="720" height="450"><span class="card-tag">19 · Khóa học kỹ năng</span><div class="card-title">XƯỞNG WEB</div><p class="card-desc">Học qua những bài thực hành nhỏ, hiểu cấu trúc trước khi thêm hiệu ứng.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="quiz/index.html"><img class="card-preview" src="previews/quiz.webp" alt="Giao diện THỬ TRÍ" loading="lazy" width="720" height="450"><span class="card-tag">20 · Trắc nghiệm</span><div class="card-title">THỬ TRÍ</div><p class="card-desc">Luyện kiến thức web bằng câu hỏi ngắn, xem giải thích ngay sau khi trả lời.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="todo/index.html"><img class="card-preview" src="previews/todo.webp" alt="Giao diện VIỆC NHỎ" loading="lazy" width="720" height="450"><span class="card-tag">21 · Quản lý công việc</span><div class="card-title">VIỆC NHỎ</div><p class="card-desc">Ghi việc cần làm, chọn ưu tiên và dành chỗ cho những điều đã hoàn thành.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="expenses/index.html"><img class="card-preview" src="previews/expenses.webp" alt="Giao diện SỔ CHI" loading="lazy" width="720" height="450"><span class="card-tag">22 · Chi tiêu cá nhân</span><div class="card-title">SỔ CHI</div><p class="card-desc">Ghi thu chi, xem số dư và điều chỉnh thói quen từ những khoản nhỏ.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="calendar/index.html"><img class="card-preview" src="previews/calendar.webp" alt="Giao diện HẸN NGÀY" loading="lazy" width="720" height="450"><span class="card-tag">23 · Lịch sự kiện</span><div class="card-title">HẸN NGÀY</div><p class="card-desc">Ghi lại lịch học, lịch nhóm và các sự kiện bạn không muốn bỏ lỡ.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="appointments/index.html"><img class="card-preview" src="previews/appointments.webp" alt="Giao diện KHOẢNG NGHỈ" loading="lazy" width="720" height="450"><span class="card-tag">24 · Đặt lịch hẹn</span><div class="card-title">KHOẢNG NGHỈ</div><p class="card-desc">Xem dịch vụ, chọn giờ phù hợp và lưu lịch chăm sóc cá nhân của bạn.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="gallery/index.html"><img class="card-preview" src="previews/gallery.webp" alt="Giao diện KHUNG" loading="lazy" width="720" height="450"><span class="card-tag">25 · Album ảnh</span><div class="card-title">KHUNG</div><p class="card-desc">Một bộ sưu tập ánh sáng, cảnh vật và khoảnh khắc đời thường.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-<a class="card" href="mini-tools/index.html"><img class="card-preview" src="previews/mini-tools.webp" alt="Giao diện BÀN NHỎ" loading="lazy" width="720" height="450"><span class="card-tag">26 · Ứng dụng mini</span><div class="card-title">BÀN NHỎ</div><p class="card-desc">Tính toán nhanh, xem lịch và đếm ngược cho một phiên tập trung.</p><span class="card-tag">HTML · CSS · JavaScript</span></a>
-
-  </div>
-
-  <footer>COMP1802 &mdash; remyvnkhiemtruong</footer>
-
+  <main>
+    <section class="wrap intro" aria-labelledby="page-title">
+      <div>
+        <p class="course-label">Bộ sưu tập bài thực hành</p>
+        <h1 id="page-title">Danh mục project.</h1>
+        <p class="intro-copy">Từ cửa hàng trực tuyến đến công cụ hằng ngày. Xem chủ đề, khám phá giao diện và thử chức năng của từng bài.</p>
+      </div>
+      <aside class="intro-side" aria-label="Thông tin bộ sưu tập">
+        <div><p class="owner">Minh Khiem Truong</p><p>Các project học phần Thiết kế Web,<br>Trường Đại học Sư phạm TP. Hồ Chí Minh.</p></div>
+        <div class="overview-numbers"><div><strong>24</strong><span>website chủ đề</span></div><div><strong>02</strong><span>bài tập nền tảng</span></div></div>
+      </aside>
+    </section>
+    <div class="catalogue-controls">
+      <div class="wrap controls-inner">
+        <div class="filters" role="group" aria-label="Lọc project theo nhóm">
+          <button type="button" data-filter="all" aria-pressed="true">Tất cả<span>26</span></button>
+          <button type="button" data-filter="commerce" aria-pressed="false">Thương mại điện tử<span>7</span></button>
+          <button type="button" data-filter="travel" aria-pressed="false">Du lịch &amp; văn hóa<span>6</span></button>
+          <button type="button" data-filter="learning" aria-pressed="false">Học tập<span>5</span></button>
+          <button type="button" data-filter="tools" aria-pressed="false">Tiện ích<span>6</span></button>
+          <button type="button" data-filter="basics" aria-pressed="false">Bài tập<span>2</span></button>
+        </div>
+        <div class="search-box"><label class="sr-only" for="project-search">Tìm theo tên, chủ đề hoặc chức năng</label><span class="search-symbol" aria-hidden="true"></span><input id="project-search" type="search" placeholder="Tìm tên hoặc chủ đề…" autocomplete="off"></div>
+      </div>
+    </div>
+    <div class="wrap" id="projects">
+      <div class="results-meta"><p id="result-count" role="status" aria-live="polite">26 / 26 project</p><span>Ảnh chụp giao diện thật của từng bài</span></div>
+      <section class="project-section" aria-labelledby="websites-heading">
+        <div class="section-heading"><h2 id="websites-heading">Website theo chủ đề</h2><span>Giao diện và chức năng riêng</span></div>
+        <div class="projects">
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="fashion/index.html" aria-label="Xem Website bán quần áo &amp; phụ kiện: NẾP">
+            <img src="previews/fashion.webp" alt="Ảnh chụp giao diện NẾP" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>01</span></div>
+            <h3><a href="fashion/index.html">NẾP</a></h3>
+            <p class="project-type">Website bán quần áo &amp; phụ kiện</p>
+            <p class="project-description">Tìm và lọc trang phục, xem thông tin sản phẩm, thêm vào giỏ hàng và lưu đơn hàng mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="fashion/index.html" aria-label="Mở website NẾP">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="tech/index.html" aria-label="Xem Website bán thiết bị công nghệ: MẠCH">
+            <img src="previews/tech.webp" alt="Ảnh chụp giao diện MẠCH" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>02</span></div>
+            <h3><a href="tech/index.html">MẠCH</a></h3>
+            <p class="project-type">Website bán thiết bị công nghệ</p>
+            <p class="project-description">Tìm thiết bị và linh kiện, xem thông số và giá; quản lý giỏ hàng và lưu đơn hàng mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="tech/index.html" aria-label="Mở website MẠCH">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="furniture/index.html" aria-label="Xem Website bán đồ nội thất: GỖ NHÀ">
+            <img src="previews/furniture.webp" alt="Ảnh chụp giao diện GỖ NHÀ" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>03</span></div>
+            <h3><a href="furniture/index.html">GỖ NHÀ</a></h3>
+            <p class="project-type">Website bán đồ nội thất</p>
+            <p class="project-description">Xem bàn, ghế, kệ và đồ trang trí theo vật liệu, kích thước và giá; chọn sản phẩm vào giỏ hàng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="furniture/index.html" aria-label="Mở website GỖ NHÀ">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="handmade/index.html" aria-label="Xem Website bán đồ thủ công: TAY MỘC">
+            <img src="previews/handmade.webp" alt="Ảnh chụp giao diện TAY MỘC" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>04</span></div>
+            <h3><a href="handmade/index.html">TAY MỘC</a></h3>
+            <p class="project-type">Website bán đồ thủ công</p>
+            <p class="project-description">Giới thiệu đồ gốm, túi đan và vật dụng thủ công; xem chi tiết sản phẩm và đặt hàng mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="handmade/index.html" aria-label="Mở website TAY MỘC">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="bookstore/index.html" aria-label="Xem Website bán sách: TRANG">
+            <img src="previews/bookstore.webp" alt="Ảnh chụp giao diện TRANG" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>05</span></div>
+            <h3><a href="bookstore/index.html">TRANG</a></h3>
+            <p class="project-type">Website bán sách</p>
+            <p class="project-description">Tìm đầu sách, đọc nội dung giới thiệu và thông tin quy cách; thêm sách vào giỏ và tính tổng đơn hàng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="bookstore/index.html" aria-label="Mở website TRANG">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="flowers/index.html" aria-label="Xem Website bán hoa &amp; quà tặng: THÁNG HOA">
+            <img src="previews/flowers.webp" alt="Ảnh chụp giao diện THÁNG HOA" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>06</span></div>
+            <h3><a href="flowers/index.html">THÁNG HOA</a></h3>
+            <p class="project-type">Website bán hoa &amp; quà tặng</p>
+            <p class="project-description">Chọn hoa theo dịp, xem bó hoa và mức giá, thêm vào giỏ và lưu đơn hàng mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="flowers/index.html" aria-label="Mở website THÁNG HOA">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="commerce">
+          <a class="preview-link" href="organic/index.html" aria-label="Xem Website bán nông sản &amp; thực phẩm: VƯỜN SỚM">
+            <img src="previews/organic.webp" alt="Ảnh chụp giao diện VƯỜN SỚM" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Thương mại điện tử</span><span>07</span></div>
+            <h3><a href="organic/index.html">VƯỜN SỚM</a></h3>
+            <p class="project-type">Website bán nông sản &amp; thực phẩm</p>
+            <p class="project-description">Xem rau củ, trái cây và thực phẩm theo quy cách đóng gói; chọn hàng và tự động tính tổng giỏ hàng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="organic/index.html" aria-label="Mở website VƯỜN SỚM">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="dalat/index.html" aria-label="Xem Website giới thiệu du lịch Đà Lạt: CHẠM ĐÀ LẠT">
+            <img src="previews/dalat.webp" alt="Ảnh chụp giao diện CHẠM ĐÀ LẠT" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>08</span></div>
+            <h3><a href="dalat/index.html">CHẠM ĐÀ LẠT</a></h3>
+            <p class="project-type">Website giới thiệu du lịch Đà Lạt</p>
+            <p class="project-description">Khám phá các điểm đến ở Đà Lạt qua hình ảnh, ghi chú hành trình và thông tin tham quan.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="dalat/index.html" aria-label="Mở website CHẠM ĐÀ LẠT">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="tours/index.html" aria-label="Xem Website đặt tour du lịch: ĐI CHẬM">
+            <img src="previews/tours.webp" alt="Ảnh chụp giao diện ĐI CHẬM" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>09</span></div>
+            <h3><a href="tours/index.html">ĐI CHẬM</a></h3>
+            <p class="project-type">Website đặt tour du lịch</p>
+            <p class="project-description">Tìm tour theo điểm đến và thời lượng, xem lịch trình, chọn ngày và lưu yêu cầu đặt tour mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="tours/index.html" aria-label="Mở website ĐI CHẬM">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="homestay/index.html" aria-label="Xem Website đặt phòng homestay: HIÊN">
+            <img src="previews/homestay.webp" alt="Ảnh chụp giao diện HIÊN" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>10</span></div>
+            <h3><a href="homestay/index.html">HIÊN</a></h3>
+            <p class="project-type">Website đặt phòng homestay</p>
+            <p class="project-description">Xem phòng và tiện nghi, chọn ngày, số đêm và số người để tính chi phí và lưu đặt phòng mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="homestay/index.html" aria-label="Mở website HIÊN">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="cuisine/index.html" aria-label="Xem Website giới thiệu ẩm thực Việt Nam: BẾP DỌC MIỀN">
+            <img src="previews/cuisine.webp" alt="Ảnh chụp giao diện BẾP DỌC MIỀN" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>11</span></div>
+            <h3><a href="cuisine/index.html">BẾP DỌC MIỀN</a></h3>
+            <p class="project-type">Website giới thiệu ẩm thực Việt Nam</p>
+            <p class="project-description">Tìm hiểu các món ăn vùng miền qua hình ảnh, câu chuyện món ăn và gợi ý cách thưởng thức.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="cuisine/index.html" aria-label="Mở website BẾP DỌC MIỀN">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="festivals/index.html" aria-label="Xem Website giới thiệu lễ hội văn hóa: MÙA HỘI">
+            <img src="previews/festivals.webp" alt="Ảnh chụp giao diện MÙA HỘI" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>12</span></div>
+            <h3><a href="festivals/index.html">MÙA HỘI</a></h3>
+            <p class="project-type">Website giới thiệu lễ hội văn hóa</p>
+            <p class="project-description">Tra cứu lễ hội theo vùng, tìm hiểu ý nghĩa văn hóa và những lưu ý khi tham gia.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="festivals/index.html" aria-label="Mở website MÙA HỘI">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="travel">
+          <a class="preview-link" href="tickets/index.html" aria-label="Xem Website đặt vé phim &amp; âm nhạc: SUẤT TỐI">
+            <img src="previews/tickets.webp" alt="Ảnh chụp giao diện SUẤT TỐI" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Du lịch &amp; văn hóa</span><span>13</span></div>
+            <h3><a href="tickets/index.html">SUẤT TỐI</a></h3>
+            <p class="project-type">Website đặt vé phim &amp; âm nhạc</p>
+            <p class="project-description">Xem các chương trình mẫu, chọn ngày và số vé, sau đó lưu lượt đặt vé mô phỏng.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="tickets/index.html" aria-label="Mở website SUẤT TỐI">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="learning">
+          <a class="preview-link" href="language/index.html" aria-label="Xem Website trung tâm ngoại ngữ: CÙNG HỌC">
+            <img src="previews/language.webp" alt="Ảnh chụp giao diện CÙNG HỌC" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Học tập</span><span>14</span></div>
+            <h3><a href="language/index.html">CÙNG HỌC</a></h3>
+            <p class="project-type">Website trung tâm ngoại ngữ</p>
+            <p class="project-description">Tìm lớp theo ngôn ngữ và trình độ, đọc bài học mẫu và lưu tiến độ hoàn thành.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="language/index.html" aria-label="Mở website CÙNG HỌC">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="learning">
+          <a class="preview-link" href="courses/index.html" aria-label="Xem Website học trực tuyến: MỞ LỚP">
+            <img src="previews/courses.webp" alt="Ảnh chụp giao diện MỞ LỚP" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Học tập</span><span>15</span></div>
+            <h3><a href="courses/index.html">MỞ LỚP</a></h3>
+            <p class="project-type">Website học trực tuyến</p>
+            <p class="project-description">Khám phá khóa học, mở bài học mẫu và theo dõi tiến độ học được lưu trên trình duyệt.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="courses/index.html" aria-label="Mở website MỞ LỚP">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="learning">
+          <a class="preview-link" href="study-blog/index.html" aria-label="Xem Website blog học tập: GHI CHÉP">
+            <img src="previews/study-blog.webp" alt="Ảnh chụp giao diện GHI CHÉP" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Học tập</span><span>16</span></div>
+            <h3><a href="study-blog/index.html">GHI CHÉP</a></h3>
+            <p class="project-type">Website blog học tập</p>
+            <p class="project-description">Đọc ghi chú HTML, CSS, JavaScript, phương pháp tự học và kinh nghiệm chuẩn bị đồ án web.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="study-blog/index.html" aria-label="Mở website GHI CHÉP">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="learning">
+          <a class="preview-link" href="coding/index.html" aria-label="Xem Website học lập trình web: XƯỞNG WEB">
+            <img src="previews/coding.webp" alt="Ảnh chụp giao diện XƯỞNG WEB" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Học tập</span><span>17</span></div>
+            <h3><a href="coding/index.html">XƯỞNG WEB</a></h3>
+            <p class="project-type">Website học lập trình web</p>
+            <p class="project-description">Khám phá bài thực hành qua giao diện trình soạn mã, đọc ví dụ và đánh dấu bài mẫu đã hoàn thành.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="coding/index.html" aria-label="Mở website XƯỞNG WEB">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="learning">
+          <a class="preview-link" href="quiz/index.html" aria-label="Xem Website trắc nghiệm kiến thức web: THỬ TRÍ">
+            <img src="previews/quiz.webp" alt="Ảnh chụp giao diện THỬ TRÍ" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Học tập</span><span>18</span></div>
+            <h3><a href="quiz/index.html">THỬ TRÍ</a></h3>
+            <p class="project-type">Website trắc nghiệm kiến thức web</p>
+            <p class="project-description">Trả lời câu hỏi, xem giải thích đáp án, theo dõi điểm và lưu kết quả cao nhất.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="quiz/index.html" aria-label="Mở website THỬ TRÍ">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="todo/index.html" aria-label="Xem Website quản lý công việc: VIỆC NHỎ">
+            <img src="previews/todo.webp" alt="Ảnh chụp giao diện VIỆC NHỎ" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>19</span></div>
+            <h3><a href="todo/index.html">VIỆC NHỎ</a></h3>
+            <p class="project-type">Website quản lý công việc</p>
+            <p class="project-description">Thêm việc, đặt mức ưu tiên, đánh dấu hoàn thành và lọc danh sách theo trạng thái.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="todo/index.html" aria-label="Mở website VIỆC NHỎ">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="expenses/index.html" aria-label="Xem Website quản lý thu chi cá nhân: SỔ CHI">
+            <img src="previews/expenses.webp" alt="Ảnh chụp giao diện SỔ CHI" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>20</span></div>
+            <h3><a href="expenses/index.html">SỔ CHI</a></h3>
+            <p class="project-type">Website quản lý thu chi cá nhân</p>
+            <p class="project-description">Ghi khoản thu và chi theo ngày, phân loại giao dịch, tự động tính tổng và số dư.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="expenses/index.html" aria-label="Mở website SỔ CHI">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="calendar/index.html" aria-label="Xem Website lịch sự kiện cá nhân: HẸN NGÀY">
+            <img src="previews/calendar.webp" alt="Ảnh chụp giao diện HẸN NGÀY" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>21</span></div>
+            <h3><a href="calendar/index.html">HẸN NGÀY</a></h3>
+            <p class="project-type">Website lịch sự kiện cá nhân</p>
+            <p class="project-description">Xem lịch tháng, thêm cuộc hẹn theo ngày giờ và quản lý các sự kiện đã lưu.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="calendar/index.html" aria-label="Mở website HẸN NGÀY">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="appointments/index.html" aria-label="Xem Website đặt lịch chăm sóc cá nhân: KHOẢNG NGHỈ">
+            <img src="previews/appointments.webp" alt="Ảnh chụp giao diện KHOẢNG NGHỈ" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>22</span></div>
+            <h3><a href="appointments/index.html">KHOẢNG NGHỈ</a></h3>
+            <p class="project-type">Website đặt lịch chăm sóc cá nhân</p>
+            <p class="project-description">Xem dịch vụ và mức phí, chọn ngày giờ, lưu lịch hẹn và kiểm tra khung giờ đã được đặt.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="appointments/index.html" aria-label="Mở website KHOẢNG NGHỈ">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="gallery/index.html" aria-label="Xem Website album ảnh cá nhân: KHUNG">
+            <img src="previews/gallery.webp" alt="Ảnh chụp giao diện KHUNG" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>23</span></div>
+            <h3><a href="gallery/index.html">KHUNG</a></h3>
+            <p class="project-type">Website album ảnh cá nhân</p>
+            <p class="project-description">Xem bộ ảnh theo chủ đề, mở ảnh trong khung lớn và thêm ảnh cá nhân vào bộ sưu tập.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="gallery/index.html" aria-label="Mở website KHUNG">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="tools">
+          <a class="preview-link" href="mini-tools/index.html" aria-label="Xem Website công cụ tiện ích: BÀN NHỎ">
+            <img src="previews/mini-tools.webp" alt="Ảnh chụp giao diện BÀN NHỎ" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Tiện ích</span><span>24</span></div>
+            <h3><a href="mini-tools/index.html">BÀN NHỎ</a></h3>
+            <p class="project-type">Website công cụ tiện ích</p>
+            <p class="project-description">Dùng máy tính, đồng hồ đếm ngược và lịch tháng; chuyển nhanh giữa từng công cụ.</p>
+            <div class="project-footer"><span>HTML · CSS · JS</span><a href="mini-tools/index.html" aria-label="Mở website BÀN NHỎ">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="project-section foundations-section" id="foundations" aria-labelledby="foundations-heading">
+        <div class="section-heading"><h2 id="foundations-heading">Bài tập nền tảng</h2><span>HTML &amp; CSS</span></div>
+        <div class="projects">
+        <article class="project" data-category="basics">
+          <a class="preview-link" href="aquarium/index.html" aria-label="Xem Website mô phỏng hồ cá: Aquarium">
+            <img src="previews/aquarium.webp" alt="Ảnh chụp giao diện Aquarium" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Bài tập nền tảng</span><span>25</span></div>
+            <h3><a href="aquarium/index.html">Aquarium</a></h3>
+            <p class="project-type">Website mô phỏng hồ cá</p>
+            <p class="project-description">Mô phỏng hồ cá với cá, rùa biển và thợ lặn chuyển động bằng hiệu ứng CSS.</p>
+            <div class="project-footer"><span>HTML · CSS</span><a href="aquarium/index.html" aria-label="Mở website Aquarium">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project" data-category="basics">
+          <a class="preview-link" href="cv/index.html" aria-label="Xem Website giới thiệu CV cá nhân: CV cá nhân">
+            <img src="previews/cv.webp" alt="Ảnh chụp giao diện CV cá nhân" width="720" height="450" loading="lazy">
+          </a>
+          <div class="project-body">
+            <div class="project-meta"><span>Bài tập nền tảng</span><span>26</span></div>
+            <h3><a href="cv/index.html">CV cá nhân</a></h3>
+            <p class="project-type">Website giới thiệu CV cá nhân</p>
+            <p class="project-description">Giới thiệu học vấn, thành tích, dự án, kỹ năng và thông tin liên hệ của Minh Khiem Truong.</p>
+            <div class="project-footer"><span>HTML · CSS</span><a href="cv/index.html" aria-label="Mở website CV cá nhân">Xem website <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="empty-state" id="empty-state" hidden>
+        <h2>Chưa tìm thấy project phù hợp.</h2>
+        <p>Thử tên khác, tìm theo chủ đề hoặc chọn lại nhóm website.</p>
+        <button class="reset-button" id="reset-filters" type="button">Xóa bộ lọc</button>
+      </section>
+      <p class="project-note">Các chức năng đặt hàng, đặt tour, đặt phòng, đặt vé và đặt lịch là mô phỏng. Dữ liệu nhập trong các project được lưu trên trình duyệt, không xử lý thanh toán thực tế.</p>
+      <noscript><p>Bật JavaScript để sử dụng bộ lọc và tìm kiếm. Bạn vẫn có thể mở tất cả project trong danh sách.</p></noscript>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><p>COMP1802 · Thiết kế Web</p><p>Minh Khiem Truong / <a href="https://github.com/remyvnkhiemtruong">remyvnkhiemtruong ↗</a></p></div></footer>
 </body>
 </html>
