@@ -1,6 +1,7 @@
 """Regression for the independent static projects. Serve repo at localhost:8080 first."""
 from pathlib import Path
 import json
+import re
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +22,11 @@ with sync_playwright() as p:
                 page.set_viewport_size({'width':width,'height':900})
                 page.goto(f'http://127.0.0.1:8080/{slug}/{file.name}')
                 page.wait_for_timeout(30)
+                if page.locator('html').get_attribute('lang') != 'en':
+                    failures.append({'type':'language','project':slug,'page':file.name})
+                visible=page.locator('body').inner_text()
+                if re.search('[\u0102\u0103\u00c2\u00e2\u00ca\u00ea\u00d4\u00f4\u01a0\u01a1\u01af\u01b0\u0110\u0111\u1ea0-\u1ef9]', visible):
+                    failures.append({'type':'untranslated-text','project':slug,'page':file.name})
                 if page.evaluate('document.documentElement.scrollWidth > innerWidth'):
                     failures.append({'type':'overflow','project':slug,'page':file.name,'width':width})
                 count+=1

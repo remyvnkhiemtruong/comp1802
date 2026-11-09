@@ -6,7 +6,7 @@ Help visitors browse sample films and live programs, review schedule information
 
 **Intended audience:** Visitors planning an evening film, music performance, or stage program.
 
-The documentation is in English; the website interface retains its Vietnamese content.
+The documentation and website interface are in English.
 
 ## Running the Project
 

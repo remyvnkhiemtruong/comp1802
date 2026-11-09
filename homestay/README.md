@@ -6,7 +6,7 @@ Help visitors compare sample rooms, view their amenities, and estimate the cost 
 
 **Intended audience:** Travelers choosing a room for an individual, family, or group stay.
 
-The documentation is in English; the website interface retains its Vietnamese content.
+The documentation and website interface are in English.
 
 ## Running the Project
 

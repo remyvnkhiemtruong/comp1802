@@ -6,7 +6,7 @@
   const projects=[...document.querySelectorAll('.project')];
   const sections=[...document.querySelectorAll('.project-section')];
   let category='all';
-  const normalize=text=>text.toLocaleLowerCase('vi').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/\s+/g,' ');
+  const normalize=text=>text.toLocaleLowerCase('en').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/\s+/g,' ');
   const index=new Map(projects.map(project=>[project,normalize(project.textContent)]));
 
   function applyFilters() {
@@ -19,7 +19,7 @@
     });
     sections.forEach(section=>{section.hidden=![...section.querySelectorAll('.project')].some(project=>!project.hidden);});
     filters.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.filter===category)));
-    document.querySelector('#result-count').textContent=visible+' / '+projects.length+' project';
+    document.querySelector('#result-count').textContent=visible+' / '+projects.length+' projects';
     document.querySelector('#empty-state').hidden=visible!==0;
   }
   filters.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;applyFilters();}));

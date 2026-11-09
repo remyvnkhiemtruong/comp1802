@@ -1,1 +1,1 @@
-/* Nhận diện được triển khai bằng HTML và CSS riêng của project. */
+/* The interface identity is implemented in project-specific HTML and CSS. */

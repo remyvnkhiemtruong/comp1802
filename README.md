@@ -2,7 +2,7 @@
 
 A collection of projects and assignments for the **Web Design** course at Ho Chi Minh City University of Education. The repository contains **24 themed websites** and **2 foundational exercises**. Each themed website has its own interface and can run independently.
 
-[Open the project catalogue](./index.html) to browse screenshots, filter by category, and search by name, website topic, or feature. The website interfaces remain in Vietnamese; these README documents are written in English.
+[Open the project catalogue](./index.html) to browse screenshots, filter by category, and search by name, website topic, or feature. The website interfaces and README documents are written in English.
 
 ## Course Information
 
@@ -95,6 +95,8 @@ Demonstration accounts, submissions, uploaded content, and other supported appli
 
 Each project README explains its own features, design decisions, limitations, and suggested presentation.
 
+The English interface update includes a one-time `js/migrate-english.js` step in each themed project. It translates saved built-in sample records and known category or priority labels while preserving custom entries, cart quantities, task completion, and lesson progress. Text entered by users is kept as entered.
+
 ## Design and Source Files
 
 Each website has its own layout, typography, navigation, and content presentation. Pages within a project share a consistent identity. Motion is restrained, and layouts support desktop and mobile screens.
@@ -114,7 +116,7 @@ python scripts/check-redesign.py
 python scripts/check-flows.py
 ```
 
-- `check-redesign.py` loads 216 themed project pages at widths of 390, 1024, and 1440 pixels. It checks for JavaScript errors, missing resources, and horizontal overflow, and saves homepage screenshots under `artifacts/redesign/`.
+- `check-redesign.py` loads 216 themed project pages at widths of 390, 1024, and 1440 pixels. It checks the English page language, untranslated visible text, JavaScript errors, missing resources, and horizontal overflow, and saves homepage screenshots under `artifacts/redesign/`.
 - `check-flows.py` exercises accounts, password changes, cart checkout, booking, duplicate appointment slots, tasks, expenses, events, quizzes, calculator and timer behavior, lesson progress, image uploads, and feedback.
 
 The catalogue has also been checked at 320, 390, 768, 1024, and 1440 pixels, including its category filters, accent-insensitive search, empty state, and reset control.

@@ -6,7 +6,7 @@ Introduce regional Vietnamese dishes through photographs, short background notes
 
 **Intended audience:** Readers interested in regional food and Vietnamese culinary culture.
 
-The documentation is in English; the website interface retains its Vietnamese content.
+The documentation and website interface are in English.
 
 ## Running the Project
 

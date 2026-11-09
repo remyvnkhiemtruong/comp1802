@@ -6,7 +6,7 @@ Help visitors browse sample travel itineraries, narrow the list by destination a
 
 **Intended audience:** Travelers comparing short trips and planning a suitable departure date.
 
-The documentation is in English; the website interface retains its Vietnamese content.
+The documentation and website interface are in English.
 
 ## Running the Project
 

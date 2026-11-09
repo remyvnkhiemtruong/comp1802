@@ -6,7 +6,7 @@ Introduce Vietnamese festivals, their regional context, and their cultural signi
 
 **Intended audience:** Readers learning about regional festivals and respectful participation.
 
-The documentation is in English; the website interface retains its Vietnamese content.
+The documentation and website interface are in English.
 
 ## Running the Project
 
