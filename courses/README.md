@@ -1,36 +1,69 @@
-# MỞ LỚP — Học trực tuyến
+# MO LOP - Online Learning Website
 
-## Mục tiêu và phạm vi
-Bài học ngắn, ví dụ rõ ràng và lộ trình có thể theo dõi từng bước.
-Đối tượng: người cần tìm hiểu và trải nghiệm học trực tuyến. Lý do chọn đề tài: gần gũi, có thể thực hành bố cục, dữ liệu và tương tác ngay trên trình duyệt.
+## Goal and Scope
 
-## Chạy
-Mở index.html hoặc dùng Live Server. HTML5, CSS3 và JavaScript thuần, không cần build. Ảnh được lưu nội bộ (nguồn Unsplash). Mỗi folder có thể sao chép và chạy độc lập.
+An introductory online-learning website for learners exploring short courses and sample lessons. The project demonstrates how HTML, CSS, JavaScript, and browser storage support a small learning workflow.
 
-## Cấu trúc
-Trang chủ, danh sách/công cụ (products.html), giới thiệu, liên hệ, góp ý, đăng ký, đăng nhập, đổi mật khẩu, thêm nội dung. CSS responsive tách riêng; js/data.js chứa 6 mục mẫu; js/main.js xử lý tương tác. Mỗi project có namespace localStorage riêng.
+## Running the Project
 
-## Chức năng
-Loại chức năng: course. Tìm kiếm, lọc, xem chi tiết; quản lý nội dung có tải ảnh. Form kiểm tra dữ liệu, thông báo kết quả. Tài khoản demo dùng băm mật khẩu có salt. Đây không phải hệ thống xác thực production. localStorage không đồng bộ giữa trình duyệt và không có backend. Không dùng thông tin thật.
+Open [index.html](./index.html) to view the site, or serve this directory with Live Server. For the account demonstration, use a local HTTP server such as Live Server or localhost so browser cryptography APIs are available.
 
-## Đối chiếu yêu cầu
-- 6 mục mẫu, đáp ứng mức tối thiểu 5 mục cho một sinh viên. Nhóm nhiều thành viên cần bổ sung ít nhất 5 sản phẩm/người.
-- Responsive: 520px, 850px; điều hướng bàn phím, focus rõ, nhãn form.
-- Animation nhẹ khi mở trang, tắt khi người dùng chọn giảm chuyển động.
-- Có các luồng tài khoản, góp ý và tương tác theo đề tài.
-- Không thêm Bootstrap/jQuery vì không cần cho triển khai hiện tại; nếu giảng viên yêu cầu sử dụng đủ thư viện nêu trong đề cần trao đổi trước khi nộp.
+The project uses native HTML5, CSS3, and JavaScript. No build step is required. Images are stored locally, with Unsplash used for the sample photography. The folder can be copied and run independently.
 
-## Gợi ý báo cáo và demo
-1. Tên, lý do, mục tiêu, đối tượng và phạm vi.
-2. Sơ đồ trang, giải thích màu sắc và bố cục.
-3. Mô tả HTML5/CSS3/JS và dữ liệu trình duyệt.
-4. Minh họa tìm kiếm, chức năng chính, tải ảnh, đăng ký/đăng nhập/đổi mật khẩu, góp ý.
-5. Kiểm tra desktop/mobile và dữ liệu không hợp lệ.
-6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
+## Structure
 
-Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+| File or directory | Purpose |
+| --- | --- |
+| [index.html](./index.html) | Home page and project-specific entry point |
+| [products.html](./products.html) | Main catalog or practice screen |
+| [about.html](./about.html) | Project introduction |
+| [contact.html](./contact.html) | Contact-message demonstration |
+| [feedback.html](./feedback.html) | Feedback form |
+| [register.html](./register.html), [login.html](./login.html), [change-password.html](./change-password.html) | Demonstration account workflows |
+| [manage.html](./manage.html) | Add a local content record and image |
+| [css/style.css](./css/style.css), [css/responsive.css](./css/responsive.css) | Project styling and responsive layouts |
+| [js/data.js](./js/data.js) | Six initial sample content records |
+| [js/main.js](./js/main.js), [js/identity.js](./js/identity.js) | Core interactions and project-specific presentation behavior |
 
-## Giao diện riêng
-Không gian học trực tuyến: Thanh bên, tiến độ thật từ dữ liệu đã lưu và bài chưa hoàn thành tiếp theo. Không hiển thị số giờ học hoặc chứng chỉ giả.
+Each project uses its own localStorage namespace.
 
-Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.
+## Features
+
+- Browse and search six sample courses, filter the catalog, and inspect course details.
+- Open sample lessons and mark them as complete.
+- View completion progress calculated from the lesson records actually saved in the browser.
+- Continue with the next unfinished sample lesson from the learning dashboard.
+- Add local course-content records with an uploaded image through the content-management page.
+
+Forms validate required input and display result messages. Shared account workflows cover registration, sign-in, sign-out, and password changes. Contact messages and feedback are stored locally; they are not sent to an external recipient.
+
+## Data and Limitations
+
+Demonstration accounts use salted password hashes stored in the browser. This is not production authentication. There is no backend, server-side authorization, cross-browser synchronization, or real payment processing. Use separate test credentials and avoid entering sensitive personal information.
+
+localStorage data is limited to the current browser and origin. Clearing browser storage removes saved accounts, content, feedback, and progress or scores. An uploaded image can fail to save if the browser storage quota is exceeded.
+
+## Course Requirements
+
+- Six sample content records are included. If the course requires at least five products or equivalent content items per student, a larger group must add enough appropriate content for every member.
+- Responsive layouts support desktop and mobile screens, with keyboard navigation, visible focus states, and labeled form controls.
+- Motion is kept minimal; reduced-motion preferences are respected where motion is used.
+- Account, feedback, and topic-specific interaction workflows are included.
+- Bootstrap and jQuery are not included in the current implementation. Confirm the instructor's expectations if the assessment requires those libraries explicitly.
+
+## Report and Demonstration Outline
+
+1. State the project name, motivation, goals, target audience, and scope.
+2. Present the page structure and explain the layout and color choices.
+3. Describe the HTML5, CSS3, JavaScript, and browser-storage implementation.
+4. Demonstrate course search, completing a sample lesson, reloading the page, and continuing with the next unfinished lesson. Also demonstrate image uploads, account workflows, and feedback.
+5. Check desktop and mobile layouts and show how invalid input is handled.
+6. Conclude with the completed frontend workflow and future work, such as a backend, authorization, and a database.
+
+Prepare the DOCX/PDF report, actual team contribution record, and 20-minute presentation including questions separately. This README is an outline, not a replacement for the report. The presence of the required pages does not guarantee an assessment score.
+
+## Design Rationale and Maintenance
+
+A learning dashboard uses a sidebar, saved-progress summary, and course overview. The next lesson is selected from unfinished content. Progress reflects actual saved completion records; the interface does not invent study hours or certificates. Supporting pages use the same dashboard identity.
+
+The HTML, CSS, and JavaScript files in this folder are the current source of truth. Do not run the old page generators in the repository's scripts directory to update this design; they can overwrite the independent layout and interactions.

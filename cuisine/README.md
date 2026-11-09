@@ -1,36 +1,85 @@
-# BẾP DỌC MIỀN — Ẩm thực
+# BEP DOC MIEN - Vietnamese Cuisine Website
 
-## Mục tiêu và phạm vi
-Khám phá món ăn Việt qua nguyên liệu, câu chuyện và cách thưởng thức.
-Đối tượng: người cần tìm hiểu và trải nghiệm ẩm thực. Lý do chọn đề tài: gần gũi, có thể thực hành bố cục, dữ liệu và tương tác ngay trên trình duyệt.
+## Goal and Scope
 
-## Chạy
-Mở index.html hoặc dùng Live Server. HTML5, CSS3 và JavaScript thuần, không cần build. Ảnh được lưu nội bộ (nguồn Unsplash). Mỗi folder có thể sao chép và chạy độc lập.
+Introduce regional Vietnamese dishes through photographs, short background notes, and serving suggestions. The project practices an editorial reading experience rather than an online store.
 
-## Cấu trúc
-Trang chủ, danh sách/công cụ (products.html), giới thiệu, liên hệ, góp ý, đăng ký, đăng nhập, đổi mật khẩu, thêm nội dung. CSS responsive tách riêng; js/data.js chứa 6 mục mẫu; js/main.js xử lý tương tác. Mỗi project có namespace localStorage riêng.
+**Intended audience:** Readers interested in regional food and Vietnamese culinary culture.
 
-## Chức năng
-Loại chức năng: guide. Tìm kiếm, lọc, xem chi tiết; quản lý nội dung có tải ảnh. Form kiểm tra dữ liệu, thông báo kết quả. Tài khoản demo dùng băm mật khẩu có salt. Đây không phải hệ thống xác thực production. localStorage không đồng bộ giữa trình duyệt và không có backend. Không dùng thông tin thật.
+The documentation is in English; the website interface retains its Vietnamese content.
 
-## Đối chiếu yêu cầu
-- 6 mục mẫu, đáp ứng mức tối thiểu 5 mục cho một sinh viên. Nhóm nhiều thành viên cần bổ sung ít nhất 5 sản phẩm/người.
-- Responsive: 520px, 850px; điều hướng bàn phím, focus rõ, nhãn form.
-- Animation nhẹ khi mở trang, tắt khi người dùng chọn giảm chuyển động.
-- Có các luồng tài khoản, góp ý và tương tác theo đề tài.
-- Không thêm Bootstrap/jQuery vì không cần cho triển khai hiện tại; nếu giảng viên yêu cầu sử dụng đủ thư viện nêu trong đề cần trao đổi trước khi nộp.
+## Running the Project
 
-## Gợi ý báo cáo và demo
-1. Tên, lý do, mục tiêu, đối tượng và phạm vi.
-2. Sơ đồ trang, giải thích màu sắc và bố cục.
-3. Mô tả HTML5/CSS3/JS và dữ liệu trình duyệt.
-4. Minh họa tìm kiếm, chức năng chính, tải ảnh, đăng ký/đăng nhập/đổi mật khẩu, góp ý.
-5. Kiểm tra desktop/mobile và dữ liệu không hợp lệ.
-6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
+This is a standalone website built with HTML5, CSS3, and plain JavaScript. No package installation or build step is required. Open [index.html](index.html) with Live Server, or start a local HTTP server from this folder:
 
-Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+```sh
+python -m http.server 8080
+```
 
-## Giao diện riêng
-Tạp chí món Việt: Bố cục biên tập nhiều cột và ảnh món ăn. Các bài đọc được trình bày như chuyên mục ẩm thực, không như sản phẩm bán hàng.
+Then visit `http://localhost:8080`. Using a local server is recommended for the demo account features, which use the browser's Web Crypto API. The folder can be copied and run independently.
 
-Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.
+## Pages and Source Files
+
+| File | Purpose |
+| --- | --- |
+| [index.html](index.html) | Home page |
+| [products.html](products.html) | Main content listing and project-specific interactions |
+| [about.html](about.html) | Project introduction |
+| [contact.html](contact.html) | Contact form demonstration |
+| [feedback.html](feedback.html) | Feedback form |
+| [register.html](register.html) | Demo account registration |
+| [login.html](login.html) | Demo account sign-in |
+| [change-password.html](change-password.html) | Demo password change |
+| [manage.html](manage.html) | Add an entry with an image |
+
+`css/style.css` contains the functional styling, `css/identity.css` defines the project identity, and `css/responsive.css` contains responsive rules. `js/data.js` provides six sample entries; `js/main.js` handles browser interactions and storage.
+
+## Features
+
+- Browse six sample dishes from different regions.
+- Search and filter articles, then open the detailed reading view.
+- Read an overview of each dish and suggestions for enjoying it.
+- Add a custom entry with a local image upload.
+- Register, sign in, and change a demo account password.
+- Validate form inputs and display success or error messages.
+- Save contact messages and feedback on the current browser.
+
+## Data and Limitations
+
+Each project has its own `localStorage` namespace. Saved entries, accounts, messages, and any booking records remain in the current browser and do not synchronize between browsers or devices. Clearing site data removes those records.
+
+Demo passwords use salted hashing. This is not a production authentication system: there is no server-side authentication, authorization, or database. Use test details rather than real credentials or personal information.
+
+Articles provide introductory educational content. The website is not a restaurant ordering service and does not provide a complete recipe or verified dietary information for every dish.
+
+## Visual Design and Assets
+
+A culinary magazine with a publication-style masthead, food photography, and multiple editorial columns. Articles are presented as reading material rather than product cards.
+
+The pages use responsive layouts, labeled form fields, keyboard navigation, and visible focus indicators. Motion is restrained; reduced-motion preferences are respected where applicable. The project collection has been checked at viewport widths of 390, 1024, and 1440 pixels.
+
+See [image source notes](images/SOURCES.md) for the available asset references. Local Noto Serif font files and their license are included in `fonts/`; see [OFL.txt](fonts/OFL.txt).
+
+The HTML, CSS, and JavaScript in this folder are the current source of truth. Do not rerun the older page generators in the repository's `scripts/` folder or copy their templates over these files, because that would overwrite the project-specific design and behavior.
+
+## Coursework Requirements
+
+- Six sample entries provide a starting point for the minimum of five entries per student. A larger group must expand its content to meet the required contribution per member.
+- The project includes home, listing, introduction, contact, feedback, and demo account pages.
+- Responsive styling and user interactions are implemented with native HTML, CSS, and JavaScript.
+- Bootstrap and jQuery are not included. If the instructor requires every library named in the examination brief, confirm that requirement before submission.
+
+## Report and Presentation Outline
+
+1. State the project name, motivation, goals, audience, and scope.
+2. Present the page map and explain the layout, colors, and typography.
+3. Explain the HTML5, CSS3, JavaScript, and browser-storage implementation.
+4. Demonstrate the main interaction, search or filtering, image upload, demo account flow, and feedback form.
+5. Show desktop and mobile layouts, including invalid input and empty states.
+6. Summarize the completed frontend and its current limitations.
+
+Prepare the DOCX/PDF report, the group's actual task allocation, and the 20-minute presentation separately. This README is a supporting outline, not a replacement for the report. Having the required pages does not guarantee a particular grade.
+
+## Future Development
+
+Add a backend, database, server-side authentication, and role-based authorization. Replace browser-only demonstrations with validated server workflows where needed, and expand the content and automated checks before any real deployment.

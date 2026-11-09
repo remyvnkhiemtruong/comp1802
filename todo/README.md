@@ -1,36 +1,71 @@
-# VIỆC NHỎ — Quản lý công việc
+# VIEC NHO - Personal Task Manager
 
-## Mục tiêu và phạm vi
-Ghi việc cần làm, chọn ưu tiên và dành chỗ cho những điều đã hoàn thành.
-Đối tượng: người cần tìm hiểu và trải nghiệm quản lý công việc. Lý do chọn đề tài: gần gũi, có thể thực hành bố cục, dữ liệu và tương tác ngay trên trình duyệt.
+## Purpose and Scope
 
-## Chạy
-Mở index.html hoặc dùng Live Server. HTML5, CSS3 và JavaScript thuần, không cần build. Ảnh được lưu nội bộ (nguồn Unsplash). Mỗi folder có thể sao chép và chạy độc lập.
+A browser-based task list for students and other users who need to organize small daily tasks. This topic provides a practical setting for HTML structure, responsive CSS, input validation, and JavaScript interaction.
 
-## Cấu trúc
-Trang chủ, danh sách/công cụ (products.html), giới thiệu, liên hệ, góp ý, đăng ký, đăng nhập, đổi mật khẩu, thêm nội dung. CSS responsive tách riêng; js/data.js chứa 6 mục mẫu; js/main.js xử lý tương tác. Mỗi project có namespace localStorage riêng.
+## Run Locally
 
-## Chức năng
-Loại chức năng: todo. Tìm kiếm, lọc, xem chi tiết; quản lý nội dung có tải ảnh. Form kiểm tra dữ liệu, thông báo kết quả. Tài khoản demo dùng băm mật khẩu có salt. Đây không phải hệ thống xác thực production. localStorage không đồng bộ giữa trình duyệt và không có backend. Không dùng thông tin thật.
+Open this folder with Live Server, or start a static server from the repository root:
 
-## Đối chiếu yêu cầu
-- 6 mục mẫu, đáp ứng mức tối thiểu 5 mục cho một sinh viên. Nhóm nhiều thành viên cần bổ sung ít nhất 5 sản phẩm/người.
-- Responsive: 520px, 850px; điều hướng bàn phím, focus rõ, nhãn form.
-- Animation nhẹ khi mở trang, tắt khi người dùng chọn giảm chuyển động.
-- Có các luồng tài khoản, góp ý và tương tác theo đề tài.
-- Không thêm Bootstrap/jQuery vì không cần cho triển khai hiện tại; nếu giảng viên yêu cầu sử dụng đủ thư viện nêu trong đề cần trao đổi trước khi nộp.
+```sh
+python -m http.server 8080
+```
 
-## Gợi ý báo cáo và demo
-1. Tên, lý do, mục tiêu, đối tượng và phạm vi.
-2. Sơ đồ trang, giải thích màu sắc và bố cục.
-3. Mô tả HTML5/CSS3/JS và dữ liệu trình duyệt.
-4. Minh họa tìm kiếm, chức năng chính, tải ảnh, đăng ký/đăng nhập/đổi mật khẩu, góp ý.
-5. Kiểm tra desktop/mobile và dữ liệu không hợp lệ.
-6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
+Then visit `http://localhost:8080/todo/`. The project uses HTML5, CSS3, and plain JavaScript. There is no build step, framework, or package installation. Use localhost rather than a direct file URL for the account features, which require the browser's Web Crypto API. Each project folder is self-contained and can also be served independently.
 
-Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+## Features
 
-## Giao diện riêng
-Danh sách công việc cá nhân: Thanh điều hướng dọc, bộ lọc trạng thái và hàng công việc có checkbox. Tiến độ được tính từ công việc đã hoàn thành.
+- Add tasks and assign normal or high priority.
+- Mark tasks as complete and filter all, active, or completed tasks.
+- Calculate completion progress from the saved task list.
+- Keep task changes after reloading the page using localStorage.
 
-Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.
+All themed projects also include registration, login, password changes, contact, feedback, and local content-entry forms. Forms validate input and display a result message. Contact and feedback submissions are saved locally; they do not send email.
+
+## File Structure
+
+- `index.html`: home page or main application workspace.
+- `products.html`: service list, photo album, or equivalent tool workspace.
+- `about.html`, `contact.html`, `feedback.html`: project information and local demonstration forms.
+- `register.html`, `login.html`, `change-password.html`: demonstration account flows.
+- `manage.html`: add local content and an image.
+- `css/style.css`, `css/responsive.css`, `css/identity.css`: base styles, responsive rules, and project identity.
+- `js/data.js`: six initial content definitions.
+- `js/main.js`: shared application and form behavior.
+- `js/ui.js`: project-specific layout and interactions.
+- `images/`: local photographs and visual assets.
+
+## Interface Design
+
+A muted green workspace with a vertical navigation rail, compact task rows, checkboxes, and an inline task form. Progress reflects completed tasks rather than decorative sample statistics. Motion is kept minimal. Responsive layouts, visible keyboard focus, and form labels support desktop and mobile use.
+
+## Data and Limitations
+
+The task list starts with six sample tasks. It has no shared workspace, notifications, or cross-device synchronization.
+
+This project uses its own `comp1802:todo:` localStorage namespace. Data is not synchronized between browsers or devices and is removed if site storage is cleared. Demonstration accounts store salted password hashes, but this frontend-only implementation is not a production authentication system. Use test credentials rather than real personal information.
+
+Photographs are stored locally. Where provided, `images/SOURCES.md` records image sources. Additional fonts include their license files in `fonts/`.
+
+## Course Requirements and Presentation
+
+- Pages cover home, the main feature, about, contact, registration, login, password changes, feedback, and content entry.
+- Six initial content definitions are included. For a product-based group submission, add enough products to meet the requirement of at least five per student; utility definitions should not be presented as merchandise.
+- Responsive layouts and topic-specific interactions demonstrate HTML5, CSS3, and JavaScript skills.
+- Bootstrap and jQuery are not included. Confirm the instructor's expectations if every library named in the exam brief must be used.
+
+Prepare the DOCX/PDF report, actual team contributions, and 20-minute group presentation separately. This README is an outline, not a substitute for the report or a guarantee of a grade.
+
+Suggested presentation:
+
+1. Explain the topic, intended audience, objectives, and scope.
+2. Show the page map and justify layout, color, and typography choices.
+3. Explain how HTML, CSS, JavaScript, and browser storage work together.
+4. Demonstrate the main feature, account flows, content entry, and feedback.
+5. Show mobile behavior, persistence where supported, and invalid-input handling.
+6. Summarize the frontend result and propose a backend, database, and server-side authentication as future work.
+
+## Maintenance
+
+Edit the HTML, CSS, and JavaScript directly in this folder. These files are the current source of truth. Do not rerun the legacy generators or copy `scripts/main-template.js` over the current scripts: doing so would overwrite this project's design and custom behavior.

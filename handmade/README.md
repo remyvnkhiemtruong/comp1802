@@ -1,40 +1,60 @@
-# TAY MỘC — Thủ công
+# TAY MOC - Handmade Goods Store
 
-## Mục tiêu và phạm vi
-Gốm, vải và những vật dụng nhỏ được làm chậm rãi, chăm chút từng chi tiết.
-Đối tượng: người cần tìm hiểu và trải nghiệm thủ công. Lý do chọn đề tài: gần gũi, có thể thực hành bố cục, dữ liệu và tương tác ngay trên trình duyệt.
+## Purpose and Scope
 
-## Chạy
-Mở index.html hoặc dùng Live Server. HTML5, CSS3 và JavaScript thuần, không cần build. Ảnh được lưu nội bộ (nguồn Unsplash). Mỗi folder có thể sao chép và chạy độc lập.
+A storefront for pottery, woven bags and small handmade objects. The project combines material-focused product stories with a browser-based shopping demonstration.
 
-## Cấu trúc
-Trang chủ, danh sách/công cụ (products.html), giới thiệu, liên hệ, góp ý, đăng ký, đăng nhập, đổi mật khẩu, thêm nội dung. CSS responsive tách riêng; js/data.js chứa 6 mục mẫu; js/main.js xử lý tương tác. Mỗi project có namespace localStorage riêng.
+The intended audience is people exploring this product category. The topic provides a familiar setting for practicing page layout, sample data and user interaction entirely in the browser.
 
-## Chức năng
-Loại chức năng: shop. Tìm kiếm, lọc, xem chi tiết; quản lý nội dung có tải ảnh. Form kiểm tra dữ liệu, thông báo kết quả. Tài khoản demo dùng băm mật khẩu có salt. Đây không phải hệ thống xác thực production. localStorage không đồng bộ giữa trình duyệt và không có backend. Không dùng thông tin thật.
+## Run Locally
 
-## Đối chiếu yêu cầu
-- 6 mục mẫu, đáp ứng mức tối thiểu 5 mục cho một sinh viên. Nhóm nhiều thành viên cần bổ sung ít nhất 5 sản phẩm/người.
-- Responsive: 520px, 850px; điều hướng bàn phím, focus rõ, nhãn form.
-- Animation nhẹ khi mở trang, tắt khi người dùng chọn giảm chuyển động.
-- Có các luồng tài khoản, góp ý và tương tác theo đề tài.
-- Không thêm Bootstrap/jQuery vì không cần cho triển khai hiện tại; nếu giảng viên yêu cầu sử dụng đủ thư viện nêu trong đề cần trao đổi trước khi nộp.
+Open [index.html](./index.html), or serve this folder with Live Server or another static HTTP server. The project uses HTML5, CSS3 and vanilla JavaScript without a build step, Bootstrap or jQuery. Use localhost for browser features that require a secure context, including demo password hashing.
 
-## Gợi ý báo cáo và demo
-1. Tên, lý do, mục tiêu, đối tượng và phạm vi.
-2. Sơ đồ trang, giải thích màu sắc và bố cục.
-3. Mô tả HTML5/CSS3/JS và dữ liệu trình duyệt.
-4. Minh họa tìm kiếm, chức năng chính, tải ảnh, đăng ký/đăng nhập/đổi mật khẩu, góp ý.
-5. Kiểm tra desktop/mobile và dữ liệu không hợp lệ.
-6. Kết luận: thực hiện được luồng frontend; hướng phát triển là backend, phân quyền, cơ sở dữ liệu.
+Images are stored locally, primarily from Unsplash. The folder can be copied and run independently. Any included fonts are stored locally with their license.
 
-Báo cáo DOCX/PDF, phân công thật của nhóm và bài thuyết trình 20 phút cần chuẩn bị riêng; README này là dàn ý, không thay thế báo cáo. Không suy ra điểm số từ việc có đầy đủ trang.
+## Pages and Source Files
 
-## Giao diện riêng
-Nhật ký xưởng thủ công, bố cục ảnh lệch nhịp và vật liệu giấy ấm.
-Các trang tài khoản, liên hệ và giới thiệu dùng cùng nhận diện của project. Các sửa đổi giao diện này được duy trì trực tiếp trong folder; không chạy script sinh trang cũ để tránh ghi đè.
+- [Home](./index.html) introduces the storefront and selected products.
+- [Products](./products.html) provides the catalogue and shopping cart.
+- [About](./about.html), [Contact](./contact.html) and [Feedback](./feedback.html) provide supporting information and forms.
+- [Register](./register.html), [Login](./login.html) and [Change Password](./change-password.html) demonstrate account flows.
+- [Add Content](./manage.html) adds a product record with an uploaded image.
+- [data.js](./js/data.js) contains six sample product records; [main.js](./js/main.js) handles browser interactions.
+- [style.css](./css/style.css), [responsive.css](./css/responsive.css) and [identity.css](./css/identity.css) define the functional base, responsive behavior and project identity.
 
-## Giao diện riêng
-Nhật ký xưởng thủ công: Bố cục ảnh lệch nhịp, trang giấy và kiểu chữ có chân hỗ trợ câu chuyện vật liệu, không dùng khung gian hàng điện tử.
+## Features
 
-Các file HTML/CSS/JS trong folder là nguồn hiện hành. Không chạy các bộ sinh mẫu cũ trong scripts để cập nhật giao diện này.
+- Browse handmade objects, read material and size information, and inspect product details.
+- Add products to the cart, change quantities, remove items and calculate the total.
+- Save a simulated order using a validated form.
+- Add product information and upload an image through the content form.
+- Demonstrate registration, login, password changes, contact messages and feedback.
+- Display validation and result messages directly on the page.
+
+Each project uses its own localStorage namespace. Demo passwords are hashed with a salt, but the account flow is not production authentication. Data is stored only in the current browser and is not synchronized between browsers or devices. There is no backend, real payment or delivery service. Use test credentials and sample information only.
+
+## Design
+
+A workshop journal uses an uneven image rhythm, a warm paper surface and serif typography to support the story of materials. Product and supporting pages share this craft-focused identity.
+
+Layouts adapt to desktop and mobile screens. Forms have labels, keyboard navigation and visible focus indicators. Motion is kept minimal; reduced-motion preferences are respected where animations are used.
+
+The HTML, CSS and JavaScript files in this folder are the current source of truth. Maintain this design directly in the folder. Do not run the old page generators in the repository's scripts directory or copy their templates over these files, because that would overwrite the independent layout and behavior.
+
+## Coursework Requirements
+
+- Six sample products cover the minimum of five products for one student. A group submission must include at least five products per student.
+- Responsive layouts, account flows, feedback and product interactions demonstrate the required frontend concepts.
+- Bootstrap and jQuery are not used in this implementation. If the instructor requires every library listed in the exam brief, confirm that requirement before submission.
+- A complete set of pages alone does not guarantee a particular assessment score.
+
+## Suggested Report and Demonstration
+
+1. Present the project name, selection rationale, objectives, audience and scope.
+2. Show the site structure and explain the layout, typography and color choices.
+3. Describe the HTML5, CSS3 and JavaScript implementation and browser storage.
+4. Demonstrate search, product details, the cart, image upload, account flows and feedback.
+5. Show desktop and mobile behavior, including invalid input and empty states.
+6. Conclude with the completed frontend scope and future work such as a backend, database and access control.
+
+Prepare the DOCX/PDF report, the group's actual task allocation and the 20-minute presentation separately. This README is an outline, not a replacement for those deliverables.
